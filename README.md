@@ -6,3 +6,6 @@ The system is built using React.js for the user interface, Firebase for real-tim
 
 By integrating these technologies, the system provides a comprehensive solution for monitoring and managing the farm environment, helping to enhance the yield and quality of the mushrooms.
 
+manual : https://drive.google.com/file/d/1IaW4jFYzGScVWHrF04hxH--tteJDX4w2/view?usp=drive_link
+poster : https://drive.google.com/file/d/17yOb9JL40-kkndocVZJLHY6g6A8FhSx_/view?usp=drive_link
+
