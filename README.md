@@ -16,7 +16,7 @@ Iot architecture
 
 Firebase console
 
-![firebase 1](https://github.com/user-attachments/assets/f2848ed6-52e7-451b-a44a-2e976944e687)
+![firebase 3](https://github.com/user-attachments/assets/969e1289-fe74-4aca-8b29-ec8f6c39f12c)
 
 Alarm alert data
 
