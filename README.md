@@ -11,15 +11,19 @@ user manual : https://drive.google.com/file/d/1IaW4jFYzGScVWHrF04hxH--tteJDX4w2/
 poster : https://drive.google.com/file/d/17yOb9JL40-kkndocVZJLHY6g6A8FhSx_/view?usp=drive_link
 
 Iot architecture
+
 ![10](https://github.com/user-attachments/assets/66554cf7-2ef4-4582-b9ef-96332d98abf0)
 
 Firebase console
+
 ![firebase 1](https://github.com/user-attachments/assets/f2848ed6-52e7-451b-a44a-2e976944e687)
 
 Alarm alert data
+
 ![firebase 2](https://github.com/user-attachments/assets/6ea8840c-34cf-459c-be4e-d30ab3e60ea7)
 
 Dashboard page
+
 ![1](https://github.com/user-attachments/assets/04c94341-0dc6-4fbe-a205-5b59e62f0ece)
 ![2](https://github.com/user-attachments/assets/5e63b8b5-f5e9-47ce-ba43-f978a099a131)
 
@@ -32,10 +36,13 @@ Real time data graph
 ![5](https://github.com/user-attachments/assets/ad3fe28e-8f6e-4558-840a-65141aab60e5)
 
 Training model, prediction based on historical data
+
 ![6](https://github.com/user-attachments/assets/2278b047-2122-4e9e-a65f-e18302b7f9f2)
 
 Prediction 30-day
+
 ![7](https://github.com/user-attachments/assets/c883bbb0-d6e3-46f6-a5b4-07a79d3c0274)
 
 Historical data
+
 ![8](https://github.com/user-attachments/assets/0d91df22-fd23-4ca5-8171-2865ade99263)
