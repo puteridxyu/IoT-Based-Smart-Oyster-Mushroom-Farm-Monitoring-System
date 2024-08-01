@@ -1,0 +1,262 @@
+import StartFirebase from "../../firebaseConfig/index";
+import React from 'react';
+import {ref, onValue, query, orderBy, limitToLast} from 'firebase/database';
+import Plot from 'react-plotly.js';
+import ReactApexChart from 'react-apexcharts'
+
+import { Component } from "react";
+import Chart from "react-apexcharts";
+
+const db = StartFirebase();
+
+
+export class ApexChart extends React.Component {
+   
+    constructor(){
+        super();
+        this.state = {
+            tableData: []
+        }
+    }
+
+    componentDidMount(){
+        
+            const que = query(ref(db, "FarmData"), limitToLast(10));
+
+            onValue(que, (snapshot) => {
+                var temps = [];
+    
+                snapshot.forEach(childSnapshot => {
+                    let key = childSnapshot.key;
+                    let value = childSnapshot.val();
+                    temps.push({"key": key, "value":value});
+                });
+                //AddAllItemsToTable(temps);
+                console.log(temps)
+                this.setState({
+                    tableData: temps
+                });
+
+            });
+    
+    }
+
+    render(){
+        var temp = this.state.tableData.map((row, i) => {
+            return row.value.temperature
+        })
+
+        var watLevel = this.state.tableData.map((row, i) => {
+            return row.value.waterLevel
+        })
+
+
+        var time = this.state.tableData.map((row, i) => {
+            return row.value.timestamp
+        })
+
+      return (
+        <div id="chart">
+            <ReactApexChart 
+                series ={[
+                    {
+                        name: 'Water Level (cm)',
+                        data: watLevel,
+
+                    }
+                ]}
+
+                options ={{
+                    chart : {
+                        type: 'area',
+                        height: 350,
+                        zoom : {
+                            enabled: false
+                        }
+                    },
+                    dataLabels : {
+                        enabled: false
+                    },
+                    stroke : {
+                        curve: 'straight'
+                    },
+                    title : {
+                        text: 'Haiii Ni TAjuk',
+                        align: 'left',
+                    },
+                    subtitle : {
+                        text: 'djdhbwhdbh',
+                        align: 'left',
+                    },
+                    labels : time,
+                   
+                    yaxis : {
+                        opposite: true,
+                    },
+                    legend : {
+                        horizontalAlign: 'left',
+                    }
+                    
+                }}
+                type="area"
+                height={350} 
+            />
+        </div>
+    )}
+}
+
+
+
+class ApexChart extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      options: {
+        chart: {
+          id: "basic-bar"
+        },
+        xaxis: {
+          categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+        }
+      },
+      series: [
+        {
+          name: "series-1",
+          data: [30, 40, 45, 50, 49, 60, 70, 91]
+        }
+      ]
+    };
+  }
+
+  render() {
+    return (
+      <div className="app">
+        <div className="row">
+          <div className="mixed-chart">
+            <Chart
+              options={
+                {
+                    chart: {
+                      id: "basic-bar"
+                    },
+                    xaxis: {
+                      categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+                    }
+                }
+              }
+              series={
+                [
+                    {
+                      name: "series-1",
+                      data: [30, 40, 45, 50, 49, 60, 70, 91]
+                    }
+                ]
+              }
+              type="bar"
+              width="500"
+            />
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default ApexChart;
+
+
+jadi-----------------------------
+
+import StartFirebase from "../../firebaseConfig/index";
+import React from 'react';
+import {ref, onValue, query, orderBy, limitToLast} from 'firebase/database';
+import Plot from 'react-plotly.js';
+import ReactApexChart from 'react-apexcharts'
+
+import { Component } from "react";
+import Chart from "react-apexcharts";
+
+const db = StartFirebase();
+
+
+
+
+export class ApexChart extends React.Component {
+    constructor(){
+        super();
+        this.state = {
+            tableData: []
+        }
+    }
+
+    componentDidMount(){
+        
+            const que = query(ref(db, "FarmData"), limitToLast(10));
+
+            onValue(que, (snapshot) => {
+                var temps = [];
+    
+                snapshot.forEach(childSnapshot => {
+                    let key = childSnapshot.key;
+                    let value = childSnapshot.val();
+                    temps.push({"key": key, "value":value});
+                });
+                //AddAllItemsToTable(temps);
+                console.log(temps)
+                this.setState({
+                    tableData: temps
+                });
+
+            });
+    
+    }
+
+    render(){
+        var temp = this.state.tableData.map((row, i) => {
+            return row.value.temperature
+        })
+
+        var watLevel = this.state.tableData.map((row, i) => {
+            return row.value.waterLevel
+        })
+
+
+        var time = this.state.tableData.map((row, i) => {
+            return row.value.timestamp
+        })
+    return (
+      <div className="app">
+        <div className="row">
+          <div className="mixed-chart">
+            <Chart
+              options={
+                {
+                    chart: {
+                      id: "basic-bar"
+                    },
+                    xaxis: {
+                      categories: time ? time : 0,
+                    }
+                }
+              }
+              series={
+                [
+                    {
+                      name: "series-1",
+                      data: temp ? temp : 0,
+                    }
+                ]
+              }
+              type="line"
+              width="500"
+             
+            
+            />
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+

@@ -1,0 +1,16 @@
+# This affects access control for clients with no username.
+topic read $SYS/#
+
+# This only affects clients with username "ayu". capstone
+
+user ayu
+topic farm/temperature
+topic farm/humidity
+topic farm/co2
+topic farm/waterLevel
+topic farm/humidifierStatus
+topic farm/longitude
+topic farm/latitude
+
+# This affects all clients.
+pattern write $SYS/broker/connection/%c/state

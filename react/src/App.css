@@ -1,0 +1,25 @@
+.sidebar{
+    display: flex;
+    margin-top: 10px;
+}
+
+
+.sidebar{
+    margin-bottom: -200px;
+    margin-top: -10px;
+}
+
+
+.link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.topbar {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}

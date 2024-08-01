@@ -1,0 +1,8 @@
+<div className='userContainer'>
+                <div className='userShow'>
+                    container 1
+                </div>
+                <  div className='userUpdate'>
+                    container 2
+                </div>
+</div>

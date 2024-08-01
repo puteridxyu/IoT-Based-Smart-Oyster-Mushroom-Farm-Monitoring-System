@@ -1,0 +1,65 @@
+.analytic{
+    flex: 4;
+    padding: 20px;
+}
+
+.analyticTitleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.analyticContainer{
+   
+    margin-top: 20px;
+}
+
+.analyticShow{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);  
+}
+
+.analyticUpdate{
+    flex: 1;
+    padding: 20px;
+    
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);  
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+
+
+
+.analyticShowTopTitle{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.analyticShowUsername{
+    font-weight: 600;
+}
+
+.analyticShowUserTitle{
+    font-weight: 300;
+}
+
+.analyticShowBottom{
+    flex: 1;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);  
+    margin-left: 20px;
+}
+
+.analyticShowTitle{
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(175, 170,170);
+}
